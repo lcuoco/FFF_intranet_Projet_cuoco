@@ -1,0 +1,67 @@
+/* -----------------------------------------------------------------------------------Feuille de Style general-------------------------------------------------------------- */
+
+th, td{
+	font-size:12px;
+}
+
+
+.tableco{
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	border: solid black 2px;
+	text-align: center;
+	width: 30%;
+	margin-top : 10%;
+	margin-left: 33%
+	
+}
+.table{
+	margin-left: 10px;
+}
+
+.crea{
+	margin-right: 10px;
+}
+
+body { 
+   overflow-x: hidden;
+}
+
+
+.tableov{
+ 	height: 300px;
+ 	width: auto;
+	overflow: auto;
+}
+
+
+.bc{
+	background-color: #003287;
+	padding-bottom: 10px;
+	padding-top: 10px;
+
+}
+
+.centre{
+	margin-left: 30px;
+}
+
+.centrea{
+	margin-left: 20px;
+}
+
+.tablecent{
+	margin-left: 50px;  
+}
+
+.hiddens{
+
+   overflow-x: hidden;
+
+}
+.back{
+	background-color: #B7E5FC;
+}
