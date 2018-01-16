@@ -1,0 +1,10 @@
+.tablejoueur{
+	border: solid black 2px;
+	text-align: center;
+	width: 50%;
+	
+}
+
+th{
+	background-color: lightgrey;
+}

@@ -1,0 +1,131 @@
+.tablejoueur{
+	border: solid black 2px;
+	text-align: center;
+	width: 100%;
+	float: bottom;
+	margin-top: 2%;
+	background-color: lightgrey;
+
+}
+.tablejoueurc{
+		border: solid black 2px;
+		background-color: #FFFACD;
+
+}
+
+th{
+	background-color: lightgrey;
+}
+
+.tableco{
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	border: solid black 2px;
+	text-align: center;
+	width: 30%;
+	margin-top : 10%;
+	margin-left: 33%
+	
+
+}
+.bandeau{
+	width: 100%;
+	text-align: center;
+	background-color : lightblue;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.buttonbandeau{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.textconnect{
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: solid black 2px;
+	text-align: center;
+	width: 100%;
+	margin-top : 10%;
+
+}
+.inconnect{
+	font-size: 20px;
+}
+
+.tableCreaJoueurs{
+	float: left;
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: solid black 2px;
+	border-left: solid black 2px;
+	border-bottom: solid black 2px;
+	text-align: center;
+	width: 50%;
+	margin-top : 2%;
+	height: 500px;
+}
+
+.tableModifJoueurs{
+	float: top;
+	background-color: lightgrey;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: solid black 2px;
+	text-align: center;
+	width: 50%;
+	margin-top : 2%;
+	margin-left: 23%;
+	height: 500px;
+}
+.tableSuppJoueurs{
+	float: top;
+	background-color: lightgrey;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-right: solid black 2px;
+	border-left: solid black 2px;
+	border-bottom: solid black 2px;	text-align: center;
+	width: 100%;
+	margin-top : 2%;
+	height: 100px;
+}
+
+.tableCreaClubs{
+	float: left;
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: solid black 2px;
+	border-left: solid black 2px;
+	border-bottom: solid black 2px;
+	text-align: center;
+	width: 50%;
+	margin-top : 2%;
+	height: 300px;
+}
+
+.tableModifClubs{
+	float: left;
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: solid black 2px;
+	border-left: solid black 2px;
+	border-bottom: solid black 2px;
+	text-align: center;
+	width: 50%;
+	margin-top : 2%;
+	height: 300px;
+}

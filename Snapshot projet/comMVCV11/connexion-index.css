@@ -1,0 +1,240 @@
+/* -----------------------------------------------------------------------------------Feuille de Style general-------------------------------------------------------------- */
+.tablejoueur{
+	border: solid black 2px;
+	text-align: center;
+	width: 100%;
+	margin-top: 2%;
+	background-color: lightgrey;
+
+}
+.tablejoueurc{
+		border: solid black 2px;
+		background-color: #FFFACD;
+
+}
+
+th{
+	background-color: lightgrey;
+}
+
+.tableco{
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	border: solid black 2px;
+	text-align: center;
+	width: 30%;
+	margin-top : 10%;
+	margin-left: 33%
+	
+
+}
+.bandeau{
+	width: 100%;
+	text-align: center;
+	background-color : lightblue;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.buttonbandeau{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.textconnect{
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: solid black 2px;
+	text-align: center;
+	width: 100%;
+	margin-top : 10%;
+
+}
+.inconnect{
+	font-size: 20px;
+}
+
+.libeletable
+{
+	text-align: center;
+	padding: 2px;
+}
+
+.titretable{
+	text-align: center;
+	text-decoration: underline;
+}
+
+.integre{
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+.buttonsub{
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+
+.affi{
+	margin-right: 15px;
+}
+
+/* ---------------------------------------------------Feuille de Style Concernant la vue de la gestion des Clubs------------------------------------*/
+
+
+
+.tableSuppJoueurs{
+
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-right: solid black 2px;
+	border-left: solid black 2px;
+	border-bottom: solid black 2px;	text-align: center;
+	width: 100%;
+	border-top: solid black 2px;
+	height: 300px;
+	margin-top:10px;
+	margin-left: 10px;
+	margin-right:10px;
+
+}
+
+.tableCreaClubs{
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: solid black 2px;
+	border-left: solid black 2px;
+	border-bottom: solid black 2px;
+	text-align: center;
+	width: 50%;
+	margin-top:10px;
+	height: 300px;
+	float:left;
+
+}
+
+
+
+.tableModifClubs{
+	float: top;
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: solid black 2px;
+	border-left: solid black 2px;
+	border-bottom: solid black 2px;
+	text-align: center;
+	width: 100%;
+	margin-top : 2%;
+	height: 300px;
+	border-right: solid black 2px;
+}
+
+.cellule5{
+	width: auto;
+}
+.cellule6{
+	width: auto;
+}
+/* ----------------------------------------Feuille de Style Concernant la vue de la gestion des Clubs ------------------------------------------- */
+.tablejoueurhisto{
+	margin-top: 10px;
+	background-color: lightgrey;
+	border-bottom: solid black 2px;
+	border-right: solid black 2px;
+	border-left: solid black 2px;
+	text-align: center;
+	border-top: solid black 2px;
+	width: 25%;
+	height:400px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+
+.tableChangJoueurs{
+	margin-top: 10px;
+	text-align: center;
+	background-color: lightgrey;
+	border-right: solid black 2px;
+	border-bottom: solid black 2px;
+	text-align: center;
+	border-top: solid black 2px;
+	height:400px;
+	padding: 10px;
+	border-left: solid black 2px;
+	margin-right: 10px;
+	margin-left: 10px;
+
+
+}
+.tableCreaJoueurs{
+	margin-top: 10px;
+	text-align: center;
+	background-color: lightgrey;
+	border-top: solid black 2px;
+	border-left: solid black 2px;
+	border-bottom: solid black 2px;
+	border-right: solid black 2px;
+	height:400px;
+	padding: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+
+}
+
+
+.affichjoueurhisto{
+	background-color: lightgrey;
+	border-bottom: solid black 2px;
+	border-right: solid black 2px;
+	border-left: solid black 2px;
+	text-align: center;
+	border-top: solid black 2px;
+	width:  100%;
+	height: 220px;
+	padding: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+
+
+	}
+
+
+	.cellule1{
+		width: auto;
+	}
+	.cellule2{
+		width: auto;
+	}
+	.cellule3{
+		width: auto;
+	}
+	.cellule4{
+		width:680px;
+	}
+
+
+	.tableModifJoueurs{
+	margin: auto;
+	float: top;
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: solid black 2px;
+	text-align: center;
+	width: auto;
+	padding: 5px;
+	margin-top : 2%;
+	height: 100px;
+}
