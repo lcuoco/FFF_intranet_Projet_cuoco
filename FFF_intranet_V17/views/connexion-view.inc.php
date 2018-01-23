@@ -34,13 +34,13 @@
         <div class ='col-lg-offset-4 col-lg-4 well well-sm' style = 'padding: 20px;'>
       <form class="form-horizontal" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES); ?>" method="post">
         <div class="form-group">
-          <label class="control-label col-lg-3" for="pseudo">Pseudo </label>
+          <label class="control-label col-lg-3" for="pseudo">Pseudonyme </label>
           <div class = 'col-lg-4'>  
           <input type="text" name="pseudo" id="pseudo"/>  
         </div>
       </div>
       <div class="form-group">
-          <label class="control-label col-lg-3" for="password">Password </label> 
+          <label class="control-label col-lg-3" for="password">Mot de Passe </label> 
            <div class="col-lg-4">
           <input type="password" name="pwd" id="pwd"/></td>
       </div>

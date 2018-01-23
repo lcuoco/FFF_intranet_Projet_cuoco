@@ -65,7 +65,7 @@ try
         										while($reponse = $resultats->fetch()){?>
         										<option value="<?php echo $reponse['IDJOUEUR']; ?>"> <?php echo $reponse['NOMJOUEUR'].' '.$reponse['PRENOMJOUEUR']; ?></option>
 												<?php } ?></select><br></td></div>
-											<div class ="text-center"><h5><span class="glyphicon glyphicon-arrow-down"></span></h5> 
+												<div class ="text-center"><h5><span class="glyphicon glyphicon-arrow-down"></span></h5> 
 												<select class ='centrea btn btn-default' name="clubint" id="clubint">
 												<?php
         										$repligue=$bdd->query('SELECT * FROM DIRECTEUR WHERE IDCOUSER = "'.$_SESSION['idUser'].'"');

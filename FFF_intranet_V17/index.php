@@ -2,6 +2,7 @@
 session_start();
 //Ici nous somes dans le controler singleton qui va permettre d'inclure le modeole ainsi que les diffrentes vues en fonction des diffrents controlers
 // on demare ici une session pour pouvoirstocker dans une variable de session l'etat qui en fonction de sa valeur enverra une vue ou une autre
+//! passernles if en switwh case
     require('config.inc.php');
     require('./modele/connexion-modele.inc.php');
     require('./controllers/connexion-controller.inc.php');
