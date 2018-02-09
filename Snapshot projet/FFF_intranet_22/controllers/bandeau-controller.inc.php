@@ -24,7 +24,15 @@
 		$_SESSION['etat'] = 'creaclub';
 		echo"<script>document.location.href='index.php';</script>";
 	}
-
-
+		if (isset($_POST['retour']) AND $_POST['retour']=='Retourner')
+	{
+		$_SESSION['etat'] = 'crea';
+		echo"<script>document.location.href='index.php';</script>";
+	}
+	if (isset($_POST['retourc']) AND $_POST['retourc']=='Retourner')
+	{
+		$_SESSION['etat'] = 'creaclub';
+		echo"<script>document.location.href='index.php';</script>";
+	}
 
 ?>
