@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="connexion-modele.inc.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="27" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="49" severity="error" message="Argument $idToCheck is missing from the Docblock of connectiondir" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="49" severity="error" message="Argument $pwdToCheck is missing from the Docblock of connectiondir" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="49" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="70" severity="error" message="Argument $idjoueur is missing from the Docblock of getNomjoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="70" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="81" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="102" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="113" severity="error" message="Argument $idJoueur is missing from the Docblock of getCategJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="113" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="120" severity="error" message="Argument $idJoueur is missing from the Docblock of getClubJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="120" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="129" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="136" severity="error" message="Argument $jcateg is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="Argument $jnom is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="Argument $jprenom is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="Argument $jadresse is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="Argument $jcp is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="Argument $jville is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="Argument $jpays is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="Argument $jemail is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="Argument $jtel is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="Argument $jclub is missing from the Docblock of CreaJoueurs" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="136" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="164" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="177" severity="error" message="Argument $cnom is missing from the Docblock of CreaClub" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="177" severity="error" message="Argument $cville is missing from the Docblock of CreaClub" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="177" severity="error" message="Argument $cpays is missing from the Docblock of CreaClub" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="177" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="191" severity="error" message="Argument $jmodif is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="Argument $jcateg is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="Argument $jnom is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="Argument $jprenom is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="Argument $jadresse is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="Argument $jcp is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="Argument $jville is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="Argument $jpays is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="Argument $jemail is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="Argument $jtel is missing from the Docblock of ModifJoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="191" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="244" severity="error" message="Argument $cmodif is missing from the Docblock of modifClub" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="244" severity="error" message="Argument $cnom is missing from the Docblock of modifClub" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="244" severity="error" message="Argument $cville is missing from the Docblock of modifClub" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="244" severity="error" message="Argument $cpays is missing from the Docblock of modifClub" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="244" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="269" severity="error" message="Argument $csupp is missing from the Docblock of SuppClub" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="269" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="277" severity="error" message="Argument $joueur is missing from the Docblock of modifclubjoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="277" severity="error" message="Argument $club is missing from the Docblock of modifclubjoueur" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="277" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="307" severity="error" message="Argument $jhisto is missing from the Docblock of AffichHisto" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="307" severity="error" message="Argument $hidden is missing from the Docblock of AffichHisto" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="307" severity="error" message="No summary for method &quot;&quot;" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $serveur" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="14" severity="error" message="No summary for property $bdd" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $user" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="16" severity="error" message="No summary for property $mdp" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $monPdo" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="18" severity="error" message="No summary for property $monPdoFFF" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+</checkstyle>

@@ -240,7 +240,7 @@ class PdoFFF{
         }
 
         /**
-        *La methode GetClubs permet de recuperer tous les clubs en fonction de la ligue de l'utilisateur
+        *La methode GetClubs permet de recuperer tous les clubs en fonction de laigue de l'utilisateur
         *
         * @return $club = retourne tableu des infos sur les clubs 
         */
