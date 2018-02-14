@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  mer. 14 fév. 2018 à 18:42
+-- Généré le :  mer. 14 fév. 2018 à 18:47
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -13,6 +13,151 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `FFF`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `CATEGORIE`
+--
+
+CREATE TABLE `CATEGORIE` (
+  `IDCATEGORIE` smallint(6) NOT NULL,
+  `TRANCHEAGECATEGORIE` char(32) DEFAULT NULL,
+  `nomCategorie` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `CATEGORIE`
+--
+
+INSERT INTO `CATEGORIE` (`IDCATEGORIE`, `TRANCHEAGECATEGORIE`, `nomCategorie`) VALUES
+(1, '6-9', 'Poussin'),
+(2, '9-11', 'Benjamin'),
+(3, '12-15', 'Minime'),
+(4, '16-18', 'Cadet'),
+(5, '18-25', 'Espoir'),
+(6, '25-50', 'Senior'),
+(7, '50-et plus', 'Vétéran');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `CLUB`
+--
+
+CREATE TABLE `CLUB` (
+  `IDCLUB` smallint(6) NOT NULL,
+  `IDLIGUE` smallint(6) NOT NULL,
+  `NOMCLUB` char(32) DEFAULT NULL,
+  `VILLECLUB` char(32) DEFAULT NULL,
+  `PAYSCLUB` char(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `CLUB`
+--
+
+INSERT INTO `CLUB` (`IDCLUB`, `IDLIGUE`, `NOMCLUB`, `VILLECLUB`, `PAYSCLUB`) VALUES
+(14, 1, 'FC YUTZ', 'Yutz', 'France'),
+(15, 1, 'FC METZ', 'Metz', 'France'),
+(16, 2, 'AC villerupt', 'Villerupt', 'France'),
+(20, 1, 'UC 12', 'Villerupt', 'France'),
+(24, 1, 'FC Ancy', 'Ancy sur Moselle', 'France'),
+(25, 2, 'FC Nancy', 'Nancy', 'France'),
+(26, 1, 'AC GB', 'Bertrange', 'France'),
+(27, 1, 'ASNL', 'Nancy', 'France'),
+(28, 1, 'US Fontoy', 'Fontoy', 'France');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `DIRECTEUR`
+--
+
+CREATE TABLE `DIRECTEUR` (
+  `IDUSERLIGUE` smallint(6) NOT NULL,
+  `IDCOUSER` varchar(10) NOT NULL,
+  `NOMUSERLIGUE` char(32) DEFAULT NULL,
+  `MDPUSERLIGUE` char(32) DEFAULT NULL,
+  `IDLIGUE` smallint(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `DIRECTEUR`
+--
+
+INSERT INTO `DIRECTEUR` (`IDUSERLIGUE`, `IDCOUSER`, `NOMUSERLIGUE`, `MDPUSERLIGUE`, `IDLIGUE`) VALUES
+(1, 'Becker', 'Becker', 'jonathan', 1),
+(2, 'Slander', 'Slander', 'patrick', 2),
+(4, 'Sclank', 'Schlank', 'bastien', 10),
+(5, 'Vava54', 'D\'Ignazio', 'valentine', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `INSCRIPTION`
+--
+
+CREATE TABLE `INSCRIPTION` (
+  `IDINSCRIPTION` smallint(6) NOT NULL,
+  `IDJOUEUR` smallint(6) DEFAULT NULL,
+  `IDLICENCE` smallint(6) NOT NULL,
+  `DATEINSCRIPTION` date DEFAULT NULL,
+  `IDCLUB` smallint(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `INSCRIPTION`
+--
+
+INSERT INTO `INSCRIPTION` (`IDINSCRIPTION`, `IDJOUEUR`, `IDLICENCE`, `DATEINSCRIPTION`, `IDCLUB`) VALUES
+(1, 78, 1, '2018-01-02', 14),
+(34, 97, 38, '2018-01-02', 20),
+(37, 98, 41, '2018-01-02', 14),
+(38, 78, 42, '2018-01-02', 15),
+(39, 99, 43, '2018-01-02', 24),
+(40, 99, 44, '2018-01-02', 15),
+(41, 100, 45, '2018-01-02', 14),
+(42, 100, 46, '2018-01-02', 20),
+(43, 101, 47, '2018-01-03', 16),
+(44, 102, 48, '2018-01-04', 20),
+(45, 99, 49, '2018-01-05', 24),
+(46, 99, 50, '2018-01-05', 15),
+(47, 103, 51, '2018-01-05', 16),
+(48, NULL, 52, '2018-01-05', 16),
+(50, NULL, 54, '2018-01-05', 16),
+(51, NULL, 55, '2018-01-05', 25),
+(52, 108, 56, '2018-01-05', 14),
+(53, 109, 57, '2018-01-05', 20),
+(54, 78, 58, '2018-01-05', 20),
+(55, 110, 59, '2018-01-05', 14),
+(56, 110, 60, '2018-01-05', 15),
+(57, NULL, 61, '2018-01-06', 14),
+(58, NULL, 62, '2018-01-06', 26),
+(59, 112, 63, '2018-01-06', 16),
+(60, 101, 64, '2018-01-06', 25),
+(61, 102, 65, '2018-01-06', 26),
+(62, 100, 66, '2018-01-06', 15),
+(63, 113, 67, '2018-01-08', 26),
+(64, 114, 68, '2018-01-14', 20),
+(65, 115, 69, '2018-01-14', 14),
+(66, 116, 70, '2018-01-15', 14),
+(67, 78, 71, '2018-01-15', 14),
+(68, 101, 72, '2018-01-15', 16),
+(69, 117, 73, '2018-01-17', 14),
+(70, 117, 74, '2018-01-17', 24),
+(71, 108, 75, '2018-01-17', 20),
+(72, 118, 76, '2018-01-17', 14),
+(73, 119, 77, '2018-01-22', 27),
+(74, 119, 78, '2018-01-22', 26),
+(75, 120, 79, '2018-01-22', 14),
+(76, 120, 80, '2018-01-22', 24),
+(77, 121, 81, '2018-01-23', 15),
+(78, 121, 82, '2018-01-23', 28),
+(79, NULL, 83, '2018-01-23', 14),
+(80, 123, 84, '2018-01-23', 14),
+(81, 123, 85, '2018-01-23', 24),
+(89, 117, 80, '2018-01-27', 14);
 
 -- --------------------------------------------------------
 
@@ -64,9 +209,131 @@ INSERT INTO `JOUEUR` (`IDJOUEUR`, `IDCATEGORIE`, `NOMJOUEUR`, `PRENOMJOUEUR`, `A
 (121, 3, 'Brevi', 'Nicolas', '7 allée des peupliersa', '57150', 'Fontoy', 'Fance', 'brevi.nicolas@gmail.com', '0687980987', 28, 1, 77),
 (123, 1, 'Willaume', 'Herve', 'rue du maillet', '', '', '', '', '', 24, 1, 80);
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `LICENCE`
+--
+
+CREATE TABLE `LICENCE` (
+  `IDLICENCE` smallint(6) NOT NULL,
+  `NUMEROSLICENCE` char(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `LICENCE`
+--
+
+INSERT INTO `LICENCE` (`IDLICENCE`, `NUMEROSLICENCE`) VALUES
+(1, '21323123'),
+(38, '3De BlaquetAlexandre2302-01-2018'),
+(41, '1AlexandreDumas1402-01-2018'),
+(42, '3LucasCuoco1502-01-2018'),
+(43, '2CatherineCuoco2402-01-2018'),
+(44, '2CatherineCuoco1502-01-2018'),
+(45, '2D\'IgnazioValentine1402-01-2018'),
+(46, '2D\'IgnazioValentine2002-01-2018'),
+(47, '3PignonMarcel1603-01-2018'),
+(48, '3MarineSant Angelo2004-01-2018'),
+(49, '2CatherineCuoco2405-01-2018'),
+(50, '2CatherineCuoco1505-01-2018'),
+(51, '2AlexisDu Four1605-01-2018'),
+(52, '1azeaze1605-01-2018'),
+(54, '1aloriglom1605-01-2018'),
+(55, '1PedroSanchez2505-01-2018'),
+(56, '3AdrianaCarambeu1405-01-2018'),
+(57, '3BarenthalHarry2005-01-2018'),
+(58, '3LucasCuoco2005-01-2018'),
+(59, '1BaumannJonathan1405-01-2018'),
+(60, '1BaumannJonathan1505-01-2018'),
+(61, '3CuocoGiovanni1406-01-2018'),
+(62, '3CuocoGiovanni2606-01-2018'),
+(63, '1Patrickgenter1606-01-2018'),
+(64, '3PignonMarcel2506-01-2018'),
+(65, '3MarineSant Angelo2606-01-2018'),
+(66, '2D\'IgnazioValentone1506-01-2018'),
+(67, '1AlexisO\'Maley2608-01-2018'),
+(68, '1HarryPotter2014-01-2018'),
+(69, '1Malcolmaubrack1414-01-2018'),
+(70, '1LucasDiabot1415-01-2018'),
+(71, '3LucasCuoco1415-01-2018'),
+(72, '3PignonMarcel1615-01-2018'),
+(73, '1JonathanDubalais1417-01-2018'),
+(74, '1JonathanDubalais2417-01-2018'),
+(75, '3AdrianaCarambeu2017-01-2018'),
+(76, '1Mauricelaval1417-01-2018'),
+(77, '3RivaMarine2722-01-2018'),
+(78, '3RivaMarine2622-01-2018'),
+(79, '3JohnDoe1422-01-2018'),
+(80, '3JohnDoe2422-01-2018'),
+(81, '3BreviNicolas1523-01-2018'),
+(82, '3BreviNicolas2823-01-2018'),
+(83, '1AlexAlo1423-01-2018'),
+(84, '1WillaumeHerve1423-01-2018'),
+(85, '1WillaumeHerve2423-01-2018'),
+(86, '1AlecBald27-01-2018'),
+(87, '1Malcolmaubrack27-01-2018'),
+(88, '1Malcolmaubrack1427-01-2018'),
+(89, '1MAnudu1412-02-2018'),
+(90, '1azdsqdqsdqsdqsd1412-02-2018'),
+(91, '1azeaze1412-02-2018'),
+(92, '1azertyaezr1412-02-2018');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `LIGUE`
+--
+
+CREATE TABLE `LIGUE` (
+  `IDLIGUE` smallint(6) NOT NULL,
+  `IDUSERLIGUE` smallint(6) NOT NULL,
+  `NOMLIGUE` char(32) DEFAULT NULL,
+  `REGIONLIGUE` char(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `LIGUE`
+--
+
+INSERT INTO `LIGUE` (`IDLIGUE`, `IDUSERLIGUE`, `NOMLIGUE`, `REGIONLIGUE`) VALUES
+(1, 1, 'Lorraine', 'Lorainne'),
+(2, 2, 'Alsace', 'Alsace'),
+(10, 4, 'Champagne', 'Champgane Ardenne');
+
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `CATEGORIE`
+--
+ALTER TABLE `CATEGORIE`
+  ADD PRIMARY KEY (`IDCATEGORIE`);
+
+--
+-- Index pour la table `CLUB`
+--
+ALTER TABLE `CLUB`
+  ADD PRIMARY KEY (`IDCLUB`),
+  ADD KEY `IDLIGUE` (`IDLIGUE`);
+
+--
+-- Index pour la table `DIRECTEUR`
+--
+ALTER TABLE `DIRECTEUR`
+  ADD PRIMARY KEY (`IDUSERLIGUE`),
+  ADD KEY `IDLIGUE` (`IDLIGUE`);
+
+--
+-- Index pour la table `INSCRIPTION`
+--
+ALTER TABLE `INSCRIPTION`
+  ADD PRIMARY KEY (`IDINSCRIPTION`),
+  ADD KEY `I_FK_INSCRIPTION_JOUEUR` (`IDJOUEUR`),
+  ADD KEY `I_FK_INSCRIPTION_LICENCE` (`IDLICENCE`),
+  ADD KEY `IDJOUEUR` (`IDJOUEUR`),
+  ADD KEY `IDCLUB` (`IDCLUB`);
 
 --
 -- Index pour la table `JOUEUR`
@@ -79,17 +346,80 @@ ALTER TABLE `JOUEUR`
   ADD KEY `IDINSCRIPTION` (`IDINSCRIPTION`);
 
 --
+-- Index pour la table `LICENCE`
+--
+ALTER TABLE `LICENCE`
+  ADD PRIMARY KEY (`IDLICENCE`);
+
+--
+-- Index pour la table `LIGUE`
+--
+ALTER TABLE `LIGUE`
+  ADD PRIMARY KEY (`IDLIGUE`),
+  ADD KEY `IDUSERLIGUE` (`IDUSERLIGUE`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
+--
+-- AUTO_INCREMENT pour la table `CATEGORIE`
+--
+ALTER TABLE `CATEGORIE`
+  MODIFY `IDCATEGORIE` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT pour la table `CLUB`
+--
+ALTER TABLE `CLUB`
+  MODIFY `IDCLUB` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+--
+-- AUTO_INCREMENT pour la table `DIRECTEUR`
+--
+ALTER TABLE `DIRECTEUR`
+  MODIFY `IDUSERLIGUE` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT pour la table `INSCRIPTION`
+--
+ALTER TABLE `INSCRIPTION`
+  MODIFY `IDINSCRIPTION` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 --
 -- AUTO_INCREMENT pour la table `JOUEUR`
 --
 ALTER TABLE `JOUEUR`
   MODIFY `IDJOUEUR` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
 --
+-- AUTO_INCREMENT pour la table `LICENCE`
+--
+ALTER TABLE `LICENCE`
+  MODIFY `IDLICENCE` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+--
+-- AUTO_INCREMENT pour la table `LIGUE`
+--
+ALTER TABLE `LIGUE`
+  MODIFY `IDLIGUE` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `CLUB`
+--
+ALTER TABLE `CLUB`
+  ADD CONSTRAINT `club_ibfk_1` FOREIGN KEY (`IDLIGUE`) REFERENCES `LIGUE` (`IDLIGUE`);
+
+--
+-- Contraintes pour la table `DIRECTEUR`
+--
+ALTER TABLE `DIRECTEUR`
+  ADD CONSTRAINT `directeur_ibfk_1` FOREIGN KEY (`IDLIGUE`) REFERENCES `LIGUE` (`IDLIGUE`);
+
+--
+-- Contraintes pour la table `INSCRIPTION`
+--
+ALTER TABLE `INSCRIPTION`
+  ADD CONSTRAINT `inscription_ibfk_2` FOREIGN KEY (`IDLICENCE`) REFERENCES `LICENCE` (`IDLICENCE`),
+  ADD CONSTRAINT `inscription_ibfk_4` FOREIGN KEY (`IDCLUB`) REFERENCES `CLUB` (`IDCLUB`),
+  ADD CONSTRAINT `inscription_ibfk_5` FOREIGN KEY (`IDJOUEUR`) REFERENCES `JOUEUR` (`IDJOUEUR`) ON DELETE SET NULL;
 
 --
 -- Contraintes pour la table `JOUEUR`
@@ -99,3 +429,9 @@ ALTER TABLE `JOUEUR`
   ADD CONSTRAINT `joueur_ibfk_2` FOREIGN KEY (`IDCLUB`) REFERENCES `CLUB` (`IDCLUB`),
   ADD CONSTRAINT `joueur_ibfk_3` FOREIGN KEY (`IDLIGUE`) REFERENCES `LIGUE` (`IDLIGUE`),
   ADD CONSTRAINT `joueur_ibfk_4` FOREIGN KEY (`IDINSCRIPTION`) REFERENCES `INSCRIPTION` (`IDINSCRIPTION`);
+
+--
+-- Contraintes pour la table `LIGUE`
+--
+ALTER TABLE `LIGUE`
+  ADD CONSTRAINT `ligue_ibfk_1` FOREIGN KEY (`IDUSERLIGUE`) REFERENCES `DIRECTEUR` (`IDUSERLIGUE`);
