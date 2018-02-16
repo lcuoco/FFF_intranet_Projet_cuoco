@@ -1,0 +1,82 @@
+/* -----------------------------------------------------------------------------------Feuille de Style general-------------------------------------------------------------- */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #003287;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+th, td{
+	font-size:12px;
+}
+
+
+.tableco{
+	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	border: solid black 2px;
+	text-align: center;
+	width: 30%;
+	margin-top : 10%;
+	margin-left: 33%
+	
+}
+
+
+.crea{
+	margin-right: 10px;
+
+}
+
+body { 
+   overflow-x: hidden;
+}
+
+
+.tableov2{
+ 	
+ 	width: auto;
+	overflow: auto;
+}
+.tableov2{
+	height: 300px;
+ 	width: auto;
+}
+
+.bc{
+	background-color: #003287;
+	padding-bottom: 10px;
+	padding-top: 10px;
+
+}
+
+.centre{
+	margin-left: 30px;
+
+}
+
+.centrea{
+	margin-left: 20px;
+
+}
+
+.tablecent{
+	margin-left: 50px;
+
+}
+
+.hiddens{
+
+   overflow-x: hidden;
+
+}
+.back{
+	background-color: #B7E5FC;
+}
