@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  mer. 14 fév. 2018 à 18:54
+-- Généré le :  mar. 16 jan. 2018 à 11:53
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Base de données :  `FFF2`
+-- Base de données :  `FFF`
 --
 
 -- --------------------------------------------------------
@@ -32,12 +32,8 @@ CREATE TABLE `CATEGORIE` (
 
 INSERT INTO `CATEGORIE` (`IDCATEGORIE`, `TRANCHEAGECATEGORIE`, `nomCategorie`) VALUES
 (1, '6-9', 'Poussin'),
-(2, '9-12', 'Benjamin'),
-(3, '12-15', 'Minime'),
-(4, '16-18', 'Cadet'),
-(5, '18-25', 'Espoir'),
-(6, '25-50', 'Senior'),
-(7, '50-et plus', 'Vétéran');
+(2, '9-12', 'Minime'),
+(3, '12-15', 'Cadet');
 
 -- --------------------------------------------------------
 
@@ -64,8 +60,7 @@ INSERT INTO `CLUB` (`IDCLUB`, `IDLIGUE`, `NOMCLUB`, `VILLECLUB`, `PAYSCLUB`) VAL
 (20, 1, 'UC 12', 'Villerupt', 'France'),
 (24, 1, 'FC Ancy', 'Ancy sur Moselle', 'France'),
 (25, 2, 'FC Nancy', 'Nancy', 'France'),
-(26, 1, 'AC GB', 'Bertrange', 'France'),
-(27, 1, 'FC Florange', 'Florange', 'France');
+(26, 1, 'AC GB', 'Bertrange', 'France');
 
 -- --------------------------------------------------------
 
@@ -142,41 +137,7 @@ INSERT INTO `INSCRIPTION` (`IDINSCRIPTION`, `IDJOUEUR`, `IDLICENCE`, `DATEINSCRI
 (65, 115, 69, '2018-01-14', 14),
 (66, 116, 70, '2018-01-15', 14),
 (67, 78, 71, '2018-01-15', 14),
-(68, 101, 72, '2018-01-15', 16),
-(70, NULL, 83, '2018-01-27', 14),
-(71, NULL, 84, '2018-01-27', 14),
-(72, NULL, 85, '2018-01-27', 20),
-(73, NULL, 86, '2018-01-27', 14),
-(74, 122, 87, '2018-01-27', 14),
-(75, 115, 88, '2018-01-27', 15),
-(76, 115, 88, '2018-01-27', 14),
-(77, NULL, 91, '2018-01-27', 20),
-(78, NULL, 91, '2018-01-27', 14),
-(79, 115, 88, '2018-01-27', 24),
-(80, 114, 94, '2018-01-27', 24),
-(81, 114, 94, '2018-01-27', 26),
-(82, 115, 88, '2018-01-27', 26),
-(83, 124, 97, '2018-01-27', 24),
-(84, 125, 98, '2018-01-27', 15),
-(85, 126, 99, '2018-01-27', 14),
-(86, 126, 99, '2018-01-27', 15),
-(88, 126, 99, '2018-01-27', 26),
-(89, 116, 103, '2018-01-28', 26),
-(90, 127, 104, '2018-01-29', 14),
-(91, 128, 105, '2018-01-29', 14),
-(92, 114, 106, '2018-02-08', 14),
-(93, 114, 107, '2018-02-08', 26),
-(95, 129, 109, '2018-02-12', 14),
-(105, 116, 124, '2018-02-12', 27),
-(109, 129, 109, '2018-02-12', 26),
-(110, 129, 109, '2018-02-12', 26),
-(111, 129, 109, '2018-02-12', 24),
-(112, 128, 126, '2018-02-12', 20),
-(113, 129, 109, '2018-02-12', 14),
-(114, 130, 128, '2018-02-13', 14),
-(115, 131, 129, '2018-02-13', 27),
-(116, 122, 130, '2018-02-13', 24),
-(117, 122, 130, '2018-02-13', 27);
+(68, 101, 72, '2018-01-15', 16);
 
 -- --------------------------------------------------------
 
@@ -195,6 +156,8 @@ CREATE TABLE `JOUEUR` (
   `PAYSJOUEUR` char(32) DEFAULT NULL,
   `EMAILJOUEUR` char(32) DEFAULT NULL,
   `TELEPHONEJOUEUR` char(32) DEFAULT NULL,
+  `IDCLUB` smallint(6) NOT NULL,
+  `IDLIGUE` smallint(6) NOT NULL,
   `IDINSCRIPTION` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -202,32 +165,23 @@ CREATE TABLE `JOUEUR` (
 -- Déchargement des données de la table `JOUEUR`
 --
 
-INSERT INTO `JOUEUR` (`IDJOUEUR`, `IDCATEGORIE`, `NOMJOUEUR`, `PRENOMJOUEUR`, `ADRESSEJOUEUR`, `CPJOUEUR`, `VILLEJOUEUR`, `PAYSJOUEUR`, `EMAILJOUEUR`, `TELEPHONEJOUEUR`, `IDINSCRIPTION`) VALUES
-(78, 3, 'Lucas', 'Cuoco', '2 allée Micheline Ostermeyer', '57970', 'Yutz', 'France', 'lucas.cuoco@gmail.com', '0789765432', 1),
-(97, 3, 'De Blaquet', 'Alexandre', '2 rue Du moulin haut', '57890', 'Congo', 'France', 'alex@lol.fr', '089787654', 34),
-(98, 2, 'Alexandre', 'Dumas', '3 rue du jambonneau', '57890', 'Bertrange', 'France', 'a.d@cara.fr', '0987654328', 37),
-(99, 3, 'Catherine', 'Cuoco', '42 rue du puis', '57130', 'Ancy', 'Angleterre', 'giova.cuoco@gmail.fr', '0686161014', 39),
-(100, 2, 'D\'Ignazio', 'Valentine', '20 rue St victor', '541900', 'Villerupt sur Marne', 'France', 'vava.fr', '098765432', 41),
-(101, 3, 'Pignon', 'Marcel', '5 rue d\'Allemagne', '58907', 'Frabi', 'France', 'pignon.m@gmail.com', '0798876543', 43),
-(102, 3, 'Marine', 'Sant Angelo', '2 rue du mayet', '57890', 'Kuntzig', 'France', 'marine.sa@gmail.com', '06223456', 44),
-(103, 2, 'Alexis', 'Du Four', '2 allée André Maleraux', '54351', 'Aumetz', 'France', 'alexis.dufour@mail.fr', '0798765432', 47),
-(108, 3, 'Adriana', 'Carambeu', '2 rue du puit', '57689', 'Hagondange', 'France', 'lio@gmail.com', '09876789', 52),
-(109, 3, 'Barenthal', 'Harry', '5 allée du puy de dome', '57890', 'Illange', 'France', 'bar.harry@gmail.com', '09876543', 53),
-(110, 3, 'Baumann', 'Jonathan', 'Rue de la Republique', '57970', 'Yutz', 'France', 'jonathan@caramil.fr', '0687980909', 55),
-(112, 2, 'Patrick', 'Genter', '2 rue du Sac de billes', '56890', 'Mondelage', 'France', 'patrick.genter@gmail.com', '0678875456', 59),
-(113, 4, 'Alexis', 'O\'Maley', '2 rue du glanda', '58900', 'Mayar', 'France', 'om@gmail.com', '08987654', 63),
-(114, 1, 'Harry', 'Potter', '2 rue de poudlard', '56789', 'Cul de Sac', 'Angleterre', 'hp@poud.fr', '09875642', 64),
-(115, 2, 'Malcolm', 'aubrack', '1 rue du saucisson', '57689', 'Yutz', 'France', 'm.a@aol.frlol', '089765432', 65),
-(116, 2, 'Lucas', 'Diabot', '2 rue du mayet', '5689', 'Rldo', 'France', 'lucas.diabot@gmail.com', '09873625324', 66),
-(122, 1, 'Alex', 'Bald', '2 rue du roi', '57890', ' Hayange', 'France', 'alec.bald@gmail.com', '0898765432', 74),
-(124, 5, 'Barique', 'Freyate', 'rue du rouge gorge', '57890', 'Metz', 'France', 'b.freayte@gmail.com', '078987654', 83),
-(125, 1, 'Maire', 'Lea', '2 rue de la mairie', '57689', 'Metz', 'France', 'lea.m@gmail.com', '09089765', 84),
-(126, 3, 'Cuoco', 'Elisa', '2 allée micheline Ostermeyer', '57970', 'Yutz', 'France', 'elisa.cuoco@gmail.com', '0698987875', 85),
-(127, 1, 'Peut', 'Importre', '2 rue aled', '67890', 'Motingny', 'France', 'p@.com', 'ksdjqd', 90),
-(128, 6, 'Alice', 'Watrinet', '2 rue du dauphinet', '57970', 'Yutz', 'France', 'alice.watri@gmail.com', '0898765432', 91),
-(129, 6, 'Gustave', 'Effeil', '12 rue des mimosas', '57970', 'Yutz', 'France', 'gustave.effeil@gmail.com', '089787654', 95),
-(130, 2, 'Maraise', 'Adrien', '', '', '', '', '', '', 114),
-(131, 5, 'Marine', 'Du balais', '', '', '', '', '', '', 115);
+INSERT INTO `JOUEUR` (`IDJOUEUR`, `IDCATEGORIE`, `NOMJOUEUR`, `PRENOMJOUEUR`, `ADRESSEJOUEUR`, `CPJOUEUR`, `VILLEJOUEUR`, `PAYSJOUEUR`, `EMAILJOUEUR`, `TELEPHONEJOUEUR`, `IDCLUB`, `IDLIGUE`, `IDINSCRIPTION`) VALUES
+(78, 3, 'Lucas', 'Cuoco', '2 allée Micheline Ostermeyer', '57970', 'Yutz', 'France', 'lucas.cuoco@gmail.com', '0789765432', 14, 1, 1),
+(97, 3, 'De Blaquet', 'Alexandre', '2 rue Du moulin haut', '57890', 'Congo', 'France', 'alex@lol.fr', '089787654', 20, 1, 34),
+(98, 2, 'Alexandre', 'Dumas', '3 rue du jambonneau', '57890', 'Bertrange', 'France', 'a.d@cara.fr', '0987654328', 14, 1, 37),
+(99, 3, 'Catherine', 'Cuoco', '42 rue du puis', '57130', 'Ancy', 'Angleterre', 'giova.cuoco@gmail.fr', '0686161014', 15, 1, 39),
+(100, 2, 'D\'Ignazio', 'Valentine', '20 rue St victor', '541900', 'Villerupt sur Marne', 'France', 'vava.fr', '098765432', 15, 1, 41),
+(101, 3, 'Pignon', 'Marcel', '5 rue d\'Allemagne', '58907', 'Frabi', 'France', 'pignon.m@gmail.com', '0798876543', 16, 2, 43),
+(102, 3, 'Marine', 'Sant Angelo', '2 rue du mayet', '57890', 'Kuntzig', 'France', 'marine.sa@gmail.com', '06223456', 26, 1, 44),
+(103, 2, 'Alexis', 'Du Four', '2 allée André Maleraux', '54351', 'Aumetz', 'France', 'alexis.dufour@mail.fr', '0798765432', 16, 2, 47),
+(108, 3, 'Adriana', 'Carambeu', '2 rue du puit', '57689', 'Hagondange', 'France', 'lio@gmail.com', '09876789', 14, 1, 52),
+(109, 3, 'Barenthal', 'Harry', '5 allée du puy de dome', '57890', 'Illange', 'France', 'bar.harry@gmail.com', '09876543', 20, 1, 53),
+(110, 3, 'Baumann', 'Jonathan', 'Rue de la Republique', '57970', 'Yutz', 'France', 'jonathan@caramil.fr', '0687980909', 15, 1, 55),
+(112, 2, 'Patrick', 'Genter', '2 rue du Sac de billes', '56890', 'Mondelage', 'France', 'patrick.genter@gmail.com', '0678875456', 16, 2, 59),
+(113, 1, 'Alexiso', 'O\'Maley', '2 rue du glanda', '58900', 'Mayar', 'France', 'om@gmail.com', '08987654', 26, 1, 63),
+(114, 1, 'Harry', 'Potter', '2 rue de poudlard', '56789', 'Cul de Sac', 'Angleterre', 'hp@poud.fr', '09875642', 20, 1, 64),
+(115, 1, 'Malcolm', 'aubrack', '1 rue de la saucisse', '57689', 'Yutz', 'France', 'm.a@aol.fr', '089765432', 14, 1, 65),
+(116, 1, 'Lucas', 'Diabot', '2 rue du mayet', '5689', 'Rldo', 'France', 'lucas.diabot@gmail.com', '09873625324', 14, 1, 66);
 
 -- --------------------------------------------------------
 
@@ -277,50 +231,7 @@ INSERT INTO `LICENCE` (`IDLICENCE`, `NUMEROSLICENCE`) VALUES
 (69, '1Malcolmaubrack1414-01-2018'),
 (70, '1LucasDiabot1415-01-2018'),
 (71, '3LucasCuoco1415-01-2018'),
-(72, '3PignonMarcel1615-01-2018'),
-(73, '1Alxeandreallo1427-01-2018'),
-(74, '1olicdsc1427-01-2018'),
-(75, '1azeaze1427-01-2018'),
-(76, '1salut bg1427-01-2018'),
-(77, '1azeazazee1427-01-2018'),
-(78, '1omasd1427-01-2018'),
-(79, '1azertyzz1427-01-2018'),
-(80, '1yobgqs1427-01-2018'),
-(81, '1mauriceduaml1427-01-2018'),
-(82, '1garyhollman1427-01-2018'),
-(83, '1alohomora1427-01-2018'),
-(84, '1moriceduval1427-01-2018'),
-(85, '1jannodolo2027-01-2018'),
-(86, '1janodolo1427-01-2018'),
-(87, '1AlecBald1427-01-2018'),
-(88, '1Malcolmaubrack1427-01-2018'),
-(89, '1Malcolmaubrack1427-01-2018'),
-(90, '1Malcolmaubrack1427-01-2018'),
-(91, '3MaioloBoris2027-01-2018'),
-(92, '3MaioloBoris2027-01-2018'),
-(93, '1Malcolmaubrack1427-01-2018'),
-(94, '1HarryPotter2027-01-2018'),
-(95, '1HarryPotter2027-01-2018'),
-(96, '1Malcolmaubrack1427-01-2018'),
-(97, '5BariqueFreyate2427-01-2018'),
-(98, '1MaireLea1527-01-2018'),
-(99, '3CuocoElisa1427-01-2018'),
-(100, '3CuocoElisa1427-01-2018'),
-(101, '3CuocoElisa1427-01-2018'),
-(102, '3CuocoElisa1427-01-2018'),
-(103, '1LucasDiabot1428-01-2018'),
-(104, '1Peut Importre1429-01-2018'),
-(105, '6AliceWatrinet1429-01-2018'),
-(106, '1HarryPottero2008-02-2018'),
-(107, '1HarryPotter2008-02-2018'),
-(109, '6GustaveEffeil1412-02-2018'),
-(124, '1LucasDiabot1412-02-2018'),
-(126, '6AliceWatrinet1412-02-2018'),
-(127, '6GustaveEffeil1412-02-2018'),
-(128, '2MaraiseAdrien1413-02-2018'),
-(129, '5MarineDu balais2713-02-2018'),
-(130, '1AlexBald1413-02-2018'),
-(131, '1AlexBald1413-02-2018');
+(72, '3PignonMarcel1615-01-2018');
 
 -- --------------------------------------------------------
 
@@ -384,6 +295,8 @@ ALTER TABLE `INSCRIPTION`
 ALTER TABLE `JOUEUR`
   ADD PRIMARY KEY (`IDJOUEUR`),
   ADD KEY `IDCATEGORIE` (`IDCATEGORIE`),
+  ADD KEY `IDCLUB` (`IDCLUB`),
+  ADD KEY `IDLIGUE` (`IDLIGUE`),
   ADD KEY `IDINSCRIPTION` (`IDINSCRIPTION`);
 
 --
@@ -407,12 +320,12 @@ ALTER TABLE `LIGUE`
 -- AUTO_INCREMENT pour la table `CATEGORIE`
 --
 ALTER TABLE `CATEGORIE`
-  MODIFY `IDCATEGORIE` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IDCATEGORIE` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `CLUB`
 --
 ALTER TABLE `CLUB`
-  MODIFY `IDCLUB` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `IDCLUB` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT pour la table `DIRECTEUR`
 --
@@ -422,17 +335,17 @@ ALTER TABLE `DIRECTEUR`
 -- AUTO_INCREMENT pour la table `INSCRIPTION`
 --
 ALTER TABLE `INSCRIPTION`
-  MODIFY `IDINSCRIPTION` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `IDINSCRIPTION` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT pour la table `JOUEUR`
 --
 ALTER TABLE `JOUEUR`
-  MODIFY `IDJOUEUR` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `IDJOUEUR` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 --
 -- AUTO_INCREMENT pour la table `LICENCE`
 --
 ALTER TABLE `LICENCE`
-  MODIFY `IDLICENCE` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `IDLICENCE` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 --
 -- AUTO_INCREMENT pour la table `LIGUE`
 --
@@ -467,6 +380,8 @@ ALTER TABLE `INSCRIPTION`
 --
 ALTER TABLE `JOUEUR`
   ADD CONSTRAINT `joueur_ibfk_1` FOREIGN KEY (`IDCATEGORIE`) REFERENCES `CATEGORIE` (`IDCATEGORIE`),
+  ADD CONSTRAINT `joueur_ibfk_2` FOREIGN KEY (`IDCLUB`) REFERENCES `CLUB` (`IDCLUB`),
+  ADD CONSTRAINT `joueur_ibfk_3` FOREIGN KEY (`IDLIGUE`) REFERENCES `LIGUE` (`IDLIGUE`),
   ADD CONSTRAINT `joueur_ibfk_4` FOREIGN KEY (`IDINSCRIPTION`) REFERENCES `INSCRIPTION` (`IDINSCRIPTION`);
 
 --

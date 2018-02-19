@@ -16,7 +16,7 @@ class PdoFFF{
         private static $bdd='dbname=FFF2';         
         private static $user='root' ;           
         private static $mdp='root' ;    
-        public static $monPdo;
+        private static $monPdo;
         private static $monPdoFFF=null;
     /**
      * Constructeur public, crée l'instance de PDO qui sera sollicitée
@@ -240,7 +240,7 @@ class PdoFFF{
         }
 
         /**
-        *La methode GetClubs permet de recuperer tous les clubs en fonction de la ligue de l'utilisateur
+        *La methode GetClubs permet de recuperer tous les clubs en fonction de laigue de l'utilisateur
         *
         * @return $club = retourne tableu des infos sur les clubs 
         */
@@ -262,8 +262,12 @@ class PdoFFF{
         */
         function getClubJoueur($idJoueur)
         {
-            $resultatsc=PdoFFF::$monPdo->prepare('SELECT * FROM INSCRIPTION WHERE IDJOUEUR = :idjoueur ORDER BY DATEINSCRIPTION DESC LIMIT 1');
-            $resultatsc->bindParam(':idjoueur', $idJoueur, PDO::PARAM_INT);
+            $resultatsi=PdoFFF::$monPdo->prepare('SELECT MAX(IDINSCRIPTION) FROM INSCRIPTION WHERE IDJOUEUR = :idjoueur');
+            $resultatsi->bindParam(':idjoueur', $idJoueur, PDO::PARAM_INT);
+            $resultatsi->execute();
+            $res = $resultatsi->fetch();
+            $resultatsc=PdoFFF::$monPdo->prepare('SELECT * FROM INSCRIPTION WHERE IDINSCRIPTION = :idisnc');
+            $resultatsc->bindParam(':idisnc', $res['MAX(IDINSCRIPTION)'], PDO::PARAM_INT);
             $resultatsc->execute();
             $idclub= $resultatsc->fetch();
             $repclub = PdoFFF::$monPdo->prepare('SELECT * FROM CLUB WHERE IDCLUB = :idclub');
